@@ -3,6 +3,10 @@ package top.mengtech.server;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import top.mengtech.packet.LoginRequestPacket;
+import top.mengtech.packet.LoginResponsePacket;
+import top.mengtech.packet.Packet;
+import top.mengtech.packet.PacketCodeC;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
@@ -12,20 +16,20 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        // 接收数据
-        ByteBuf byteBuf = (ByteBuf) msg;
-        System.out.println(new Date() + "：服务端接收到数据->" + byteBuf.toString(Charset.forName("utf-8")));
+        ByteBuf buffer = (ByteBuf)msg;
+        Packet packet = PacketCodeC.INSTANCE.decode(buffer);
 
-        // 发送数据
-        System.out.println(new Date() + ": 服务端写出数据");
-        ByteBuf out = getByteBuf(ctx);
-        ctx.channel().writeAndFlush(out);
-    }
+        if(packet instanceof LoginRequestPacket){
+            LoginRequestPacket loginRequestPacket = (LoginRequestPacket) packet;
 
-    private ByteBuf getByteBuf(ChannelHandlerContext ctx) throws UnsupportedEncodingException {
-        byte[] bytes = "欢迎".getBytes("utf-8");
-        ByteBuf byteBuf = ctx.alloc().buffer();
-        byteBuf.writeBytes(bytes);
-        return byteBuf;
+            System.out.println("登陆成功："+ loginRequestPacket.getUsername());
+
+            LoginResponsePacket responsePacket = new LoginResponsePacket();
+            responsePacket.setSuccess(true);
+            responsePacket.setReason("登陆成功");
+
+            ByteBuf response = PacketCodeC.INSTANCE.encode(ctx.alloc(),responsePacket);
+            ctx.channel().writeAndFlush(response);
+        }
     }
 }

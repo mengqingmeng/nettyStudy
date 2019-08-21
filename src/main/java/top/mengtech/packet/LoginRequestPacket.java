@@ -5,7 +5,7 @@ import top.mengtech.command.Command;
 
 @Data
 public class LoginRequestPacket extends Packet {
-    private Integer userId;
+    private String userId;
     private String username;
     private String password;
 

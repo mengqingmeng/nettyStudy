@@ -9,24 +9,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static top.mengtech.command.Command.LOGIN_REQUEST;
+import static top.mengtech.command.Command.LOGIN_RESPONSE;
 
 public class PacketCodeC {
     private static final int MAGIC_NUMBER = 0x12345678;
     private static final Map<Byte,Class<? extends Packet>> packetTypeMap; // 数据包类型map
     private static final Map<Byte,Serializer> serializerMap; // 序列化map
+    public static final PacketCodeC INSTANCE = new PacketCodeC();
 
     static {
         packetTypeMap = new HashMap<Byte, Class<? extends Packet>>();
         packetTypeMap.put(LOGIN_REQUEST, LoginRequestPacket.class);
+        packetTypeMap.put(LOGIN_RESPONSE, LoginResponsePacket.class);
 
         serializerMap = new HashMap<Byte, Serializer>();
         Serializer jsonSerializer = new JSONSerializer();
         serializerMap.put(jsonSerializer.getSerializerAlgorithm(),jsonSerializer);
     }
 
-    public ByteBuf encode(Packet packet){
+    public ByteBuf encode(ByteBufAllocator byteBufAllocator,Packet packet){
         // 1 创建ByteBuf
-        ByteBuf buffer = ByteBufAllocator.DEFAULT.ioBuffer();
+        ByteBuf buffer = byteBufAllocator.ioBuffer();
         // 2 序列化
         byte[] bytes = Serializer.DEFAULT.serialize(packet);
 
