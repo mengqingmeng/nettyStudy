@@ -2,7 +2,6 @@ package top.mengtech.packet;
 
 import lombok.Data;
 
-@Data
 public abstract class Packet {
 
     /**
@@ -15,4 +14,13 @@ public abstract class Packet {
      * @return
      */
      public abstract Byte getCommand();
+
+    public Byte getVersion() {
+        return version;
+    }
+
+    public void setVersion(Byte version) {
+        this.version = version;
+    }
 }
+

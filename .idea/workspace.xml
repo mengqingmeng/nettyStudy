@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/coder/PacketDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/coder/PacketEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginResponsePacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/attributes/Attributes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginRequestPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginRequestPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/PacketCodeC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/PacketCodeC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginResponsePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginResponsePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/ServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginRequestPacket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/PacketCodeC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/PacketCodeC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/ServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/ServerHandler.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +37,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../WEB/maven/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../WEB/maven/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -44,6 +53,7 @@
   <component name="ProjectId" id="1PfOKaCRKjmmnDwFQTHtLSCCFUL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="LombokPluginEnabledInProject" value="true" />
     <property name="LombokPluginIS_ANNOTATION_PROCESSING_CHECK_Enabled" value="true" />
     <property name="LombokPluginIS_BUILDER_Enabled" value="true" />
@@ -56,10 +66,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -135,6 +146,10 @@
       <workItem from="1567669026244" duration="804000" />
       <workItem from="1567670340316" duration="263000" />
       <workItem from="1567670642533" duration="4079000" />
+      <workItem from="1567687290260" duration="152000" />
+      <workItem from="1567687453783" duration="3256000" />
+      <workItem from="1567691464117" duration="2013000" />
+      <workItem from="1567693582805" duration="213000" />
     </task>
     <servers />
   </component>
