@@ -3,17 +3,18 @@ package top.mengtech.client;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.util.Date;
 
+@Slf4j
 public class ClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        System.out.println(new Date() + "：客户端写出数据");
-        ByteBuf buffer = getBytes(ctx);
-        ctx.channel().writeAndFlush(buffer);
+        log.info("客户端开始登录");
+        ctx.channel().writeAndFlush(null);
     }
 
     @Override
