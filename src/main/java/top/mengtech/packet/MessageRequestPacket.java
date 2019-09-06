@@ -4,13 +4,11 @@ import lombok.Data;
 import top.mengtech.command.Command;
 
 @Data
-public class LoginResponsePacket extends Packet {
-    private boolean success;
-    private String reason;
+public class MessageRequestPacket extends Packet {
+    private String message;
 
     @Override
     public Byte getCommand() {
-        return Command.LOGIN_RESPONSE;
+        return Command.MESSAGE_REQUEST;
     }
-
 }

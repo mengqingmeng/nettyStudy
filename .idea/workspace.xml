@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+    <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="配置日志">
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/MessageRequestPacket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/MessageResponsePacket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/ServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/ServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/ServerHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginRequestPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginRequestPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginResponsePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginResponsePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginRequestPacket.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -149,7 +150,16 @@
       <workItem from="1567687453783" duration="3256000" />
       <workItem from="1567691464117" duration="2013000" />
       <workItem from="1567693582805" duration="213000" />
+      <workItem from="1567757438045" duration="2938000" />
     </task>
+    <task id="LOCAL-00001" summary="配置日志">
+      <created>1567741823092</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567741823092</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -176,5 +186,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="配置日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置日志" />
   </component>
 </project>
