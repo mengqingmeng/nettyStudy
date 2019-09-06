@@ -14,6 +14,7 @@ import java.nio.charset.Charset;
 import java.time.LocalDateTime;
 import java.util.Date;
 
+@Slf4j
 public class ServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
@@ -25,14 +26,13 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 
         if(packet instanceof LoginRequestPacket){
             LoginRequestPacket loginRequestPacket = (LoginRequestPacket) packet;
-            System.out.println(new Date()+ "登陆成功：" + loginRequestPacket.getUsername());
+            log.info(new Date()+ "登陆成功：" + loginRequestPacket.getUsername());
 
             LoginResponsePacket responsePacket = new LoginResponsePacket();
             responsePacket.setReason("登陆成功");
             responsePacket.setSuccess(true);
             ctx.channel().writeAndFlush(PacketCodeC.INSTANCE.encode(responsePacket));
         }
-        ctx.channel().writeAndFlush(PacketCodeC.INSTANCE.encode(null));
     }
 
     private ByteBuf getByteBuf(ChannelHandlerContext ctx) throws UnsupportedEncodingException {

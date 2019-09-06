@@ -14,10 +14,11 @@ import java.nio.charset.Charset;
 import java.util.Date;
 import java.util.UUID;
 
+@Slf4j
 public class ClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        System.out.println("客户端开始登录");
+        log.info("客户端开始登录");
         // 登陆数据对象
         LoginRequestPacket requestPacket = new LoginRequestPacket();
         requestPacket.setUsername("测试登陆");
@@ -40,9 +41,9 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             LoginResponsePacket loginResponsePacket = (LoginResponsePacket) packet;
 
             if (loginResponsePacket.isSuccess()) {
-                System.out.println(new Date() + ": 客户端登录成功");
+                log.info(new Date() + ": 客户端登录成功");
             } else {
-                System.out.println(new Date() + ": 客户端登录失败，原因：" + loginResponsePacket.getReason());
+                log.info(new Date() + ": 客户端登录失败，原因：" + loginResponsePacket.getReason());
             }
         }
     }

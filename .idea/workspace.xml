@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/attributes/Attributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginRequestPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginRequestPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginResponsePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginResponsePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/ServerHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginRequestPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/PacketCodeC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/PacketCodeC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/ServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/ServerHandler.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
