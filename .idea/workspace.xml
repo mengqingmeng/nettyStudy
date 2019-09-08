@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="配置日志">
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/MessageRequestPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/MessageResponsePacket.java" afterDir="false" />
+    <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/LoginRequestHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/MessageRequestHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginRequestPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginRequestPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginResponsePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/LoginResponsePacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginRequestPacket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/ClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/MessageResponsePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/MessageResponsePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/PacketCodeC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/PacketCodeC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/ServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/PacketCodeC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/PacketCodeC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/ServerHandler.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,10 +80,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -92,7 +105,7 @@
       <module name="nettyStudy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="top.mengtech.client.*" />
+          <option name="PATTERN" value="top.mengtech.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,6 +164,11 @@
       <workItem from="1567691464117" duration="2013000" />
       <workItem from="1567693582805" duration="213000" />
       <workItem from="1567757438045" duration="2938000" />
+      <workItem from="1567818905890" duration="1199000" />
+      <workItem from="1567864611006" duration="642000" />
+      <workItem from="1567911026558" duration="4735000" />
+      <workItem from="1567951962414" duration="3735000" />
+      <workItem from="1567957520724" duration="2693000" />
     </task>
     <task id="LOCAL-00001" summary="配置日志">
       <created>1567741823092</created>
@@ -190,5 +208,31 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="配置日志" />
     <option name="LAST_COMMIT_MESSAGE" value="配置日志" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/top/mengtech/server/MessageRequestHandler.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/top/mengtech/server/LoginRequestHandler.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

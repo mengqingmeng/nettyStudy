@@ -2,15 +2,16 @@ package top.mengtech.packet;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
+import lombok.extern.slf4j.Slf4j;
 import top.mengtech.serializer.Serializer;
 import top.mengtech.serializer.impl.JSONSerializer;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static top.mengtech.command.Command.LOGIN_REQUEST;
-import static top.mengtech.command.Command.LOGIN_RESPONSE;
+import static top.mengtech.command.Command.*;
 
+@Slf4j
 public class PacketCodeC {
     private static final int MAGIC_NUMBER = 0x12345678;
     private final Map<Byte,Class<? extends Packet>> packetTypeMap; // 数据包类型map
@@ -22,6 +23,8 @@ public class PacketCodeC {
         packetTypeMap = new HashMap<Byte, Class<? extends Packet>>();
         packetTypeMap.put(LOGIN_REQUEST, LoginRequestPacket.class);
         packetTypeMap.put(LOGIN_RESPONSE,LoginResponsePacket.class);
+        packetTypeMap.put(MESSAGE_REQUEST, MessageRequestPacket.class);
+        packetTypeMap.put(MESSAGE_RESPONSE,MessageResponsePacket.class);
 
         // 序列化方法Map
         serializerMap = new HashMap<Byte, Serializer>();
@@ -67,10 +70,20 @@ public class PacketCodeC {
     }
 
     private Class<? extends Packet> getRequestType(byte command){
+        Class packetType = packetTypeMap.get(command);
+        if( packetType == null){
+            log.error("未找到Packet定义");
+            return null;
+        }
         return packetTypeMap.get(command);
     }
 
     private Serializer getSerializer(byte serializerAlgorithm){
+        Serializer serializer = serializerMap.get(serializerAlgorithm);
+        if(serializer == null){
+            log.error("为找到序列化方法");
+            return null;
+        }
         return serializerMap.get(serializerAlgorithm);
     }
 }

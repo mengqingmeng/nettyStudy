@@ -1,14 +1,25 @@
 package top.mengtech.client;
 
 import io.netty.bootstrap.Bootstrap;
+import io.netty.buffer.ByteBuf;
+import io.netty.channel.Channel;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import lombok.extern.slf4j.Slf4j;
+import top.mengtech.coder.PacketDecoder;
+import top.mengtech.coder.PacketEncoder;
+import top.mengtech.packet.MessageRequestPacket;
+import top.mengtech.packet.PacketCodeC;
+import top.mengtech.server.LoginRequestHandler;
 
 import java.util.Date;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+@Slf4j
 public class Client  {
 
     private static final int MAX_RETRY = 5;
@@ -21,7 +32,10 @@ public class Client  {
                 .channel(NioSocketChannel.class)
                 .handler(new ChannelInitializer<SocketChannel>() {
                     protected void initChannel(SocketChannel socketChannel) throws Exception {
-                        socketChannel.pipeline().addLast(new ClientHandler());
+                        socketChannel.pipeline().addLast(new PacketDecoder());// 编码
+                        socketChannel.pipeline().addLast(new LoginResponseHandler());
+                        socketChannel.pipeline().addLast(new MessageResponseHandler());
+                        socketChannel.pipeline().addLast(new PacketEncoder());// 解码
                     }
                 });
         connect(bootstrap,"localhost",8000,MAX_RETRY);
@@ -30,15 +44,35 @@ public class Client  {
     private static void connect(Bootstrap bootstrap,String host,int port,int retry){
         bootstrap.connect(host,port).addListener(future->{
            if (future.isSuccess()){
-               System.out.println("连接成功");
+               log.info("连接成功");
+               Channel channel = ((ChannelFuture)future).channel();
+               startConsoleThread(channel);
            }else{
-               System.err.println("连接失败，开始重连");
+               log.info("连接失败，开始重连");
                int order = (MAX_RETRY - retry) + 1;
                int delay = 1 << order;
-               System.out.println(new Date() + ": 连接失败，第" + order + "次重连……");
+               log.info(new Date() + ": 连接失败，第" + order + "次重连……");
                bootstrap.config().group().schedule(()->connect(bootstrap, host, port,retry-1),delay, TimeUnit.SECONDS);
 
            }
         });
+    }
+
+    // 开启线程监听命令行输入
+    private static void startConsoleThread(Channel channel){
+        new Thread(()->{
+            while (!Thread.interrupted()){
+                if(LoginUtil.hasLogin(channel)){
+                    log.info("请输入消息：");
+                    Scanner scanner = new Scanner(System.in);
+                    String line = scanner.nextLine();
+                    MessageRequestPacket requestPacket = new MessageRequestPacket();
+                    requestPacket.setMessage(line);
+
+                    ByteBuf message = PacketCodeC.INSTANCE.encode(requestPacket);
+                    channel.writeAndFlush(message);
+                }
+            }
+        }).start();
     }
 }
