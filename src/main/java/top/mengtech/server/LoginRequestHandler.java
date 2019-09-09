@@ -12,6 +12,7 @@ import java.util.Date;
 // 处理登录请求
 @Slf4j
 public class LoginRequestHandler extends SimpleChannelInboundHandler<LoginRequestPacket> {
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, LoginRequestPacket msg) throws Exception {
         log.info(new Date()+ "登陆成功：" + msg.getUsername());

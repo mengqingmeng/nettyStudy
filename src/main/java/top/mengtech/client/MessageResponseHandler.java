@@ -10,7 +10,7 @@ import java.util.Date;
 @Slf4j
 public class MessageResponseHandler extends SimpleChannelInboundHandler<MessageResponsePacket> {
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, MessageResponsePacket msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, MessageResponsePacket msg){
         log.info(new Date() + "收到服务端消息：" + msg.getMessage());
     }
 }

@@ -7,7 +7,7 @@ import top.mengtech.packet.Packet;
 import top.mengtech.packet.PacketCodeC;
 
 public class PacketEncoder extends MessageToByteEncoder<Packet> {
-    protected void encode(ChannelHandlerContext ctx, Packet msg, ByteBuf out) throws Exception {
+    protected void encode(ChannelHandlerContext ctx, Packet msg, ByteBuf out) {
         PacketCodeC.INSTANCE.encode(out,msg);
     }
 }

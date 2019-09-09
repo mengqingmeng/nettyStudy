@@ -13,7 +13,7 @@ import java.util.UUID;
 @Slf4j
 public class LoginResponseHandler extends SimpleChannelInboundHandler<LoginResponsePacket> {
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, LoginResponsePacket msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, LoginResponsePacket msg){
 
         if (msg.isSuccess()) {
             LoginUtil.martAsLogin(ctx.channel());
@@ -24,7 +24,7 @@ public class LoginResponseHandler extends SimpleChannelInboundHandler<LoginRespo
     }
 
     @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+    public void channelActive(ChannelHandlerContext ctx) {
         LoginRequestPacket loginRequestPacket = new LoginRequestPacket();
         loginRequestPacket.setUserId(UUID.randomUUID().toString());
         loginRequestPacket.setUsername("flash");

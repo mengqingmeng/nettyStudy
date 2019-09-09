@@ -5,6 +5,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
@@ -30,12 +31,15 @@ public class Client  {
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.group(workerGroup)
                 .channel(NioSocketChannel.class)
+                .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 5000)
+                .option(ChannelOption.SO_KEEPALIVE, true)
+                .option(ChannelOption.TCP_NODELAY, true)
                 .handler(new ChannelInitializer<SocketChannel>() {
-                    protected void initChannel(SocketChannel socketChannel) throws Exception {
-                        socketChannel.pipeline().addLast(new PacketDecoder());// 编码
-                        socketChannel.pipeline().addLast(new LoginResponseHandler());
-                        socketChannel.pipeline().addLast(new MessageResponseHandler());
-                        socketChannel.pipeline().addLast(new PacketEncoder());// 解码
+                    protected void initChannel(SocketChannel ch) throws Exception {
+                        ch.pipeline().addLast(new PacketDecoder());
+                        ch.pipeline().addLast(new LoginResponseHandler());
+                        ch.pipeline().addLast(new MessageResponseHandler());
+                        ch.pipeline().addLast(new PacketEncoder());
                     }
                 });
         connect(bootstrap,"localhost",8000,MAX_RETRY);
@@ -66,11 +70,8 @@ public class Client  {
                     log.info("请输入消息：");
                     Scanner scanner = new Scanner(System.in);
                     String line = scanner.nextLine();
-                    MessageRequestPacket requestPacket = new MessageRequestPacket();
-                    requestPacket.setMessage(line);
-
-                    ByteBuf message = PacketCodeC.INSTANCE.encode(requestPacket);
-                    channel.writeAndFlush(message);
+                    MessageRequestPacket packet = new MessageRequestPacket(line);
+                    channel.writeAndFlush(packet);
                 }
             }
         }).start();
