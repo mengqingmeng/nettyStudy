@@ -10,7 +10,7 @@ public interface Serializer {
      * 序列化算法
      * @return 算法代表的byte值
      */
-    byte getSerializerAlgorithm();
+    byte getSerializerAlogrithm();
 
     /**
      * 序列化

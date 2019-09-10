@@ -3,22 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="配置日志">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/coder/PacketEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/coder/PacketEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/MessageRequestPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/MessageRequestPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/Packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/Packet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/PacketCodeC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/PacketCodeC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/LoginRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/LoginRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/coder/PacketEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/coder/PacketEncoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/Packet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/Packet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/serializer/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/serializer/Serializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/serializer/impl/JSONSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/serializer/impl/JSONSerializer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,11 +191,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/top/mengtech/server/LoginRequestHandler.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java</url>
           <line>13</line>

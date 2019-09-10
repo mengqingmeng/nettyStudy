@@ -8,7 +8,7 @@ import top.mengtech.serializer.SerializerAlgorithm;
  * json 序列化和反序列化工具
  */
 public class JSONSerializer implements Serializer {
-    public byte getSerializerAlgorithm() {
+    public byte getSerializerAlogrithm() {
         return SerializerAlgorithm.JSON;
     }
 
