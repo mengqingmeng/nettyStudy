@@ -33,4 +33,9 @@ public class LoginResponseHandler extends SimpleChannelInboundHandler<LoginRespo
         // 写数据
         ctx.channel().writeAndFlush(loginRequestPacket);
     }
+
+    @Override
+    public void channelInactive(ChannelHandlerContext ctx) {
+        log.info("客户端连接被关闭!");
+    }
 }

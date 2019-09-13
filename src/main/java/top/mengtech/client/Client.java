@@ -66,13 +66,13 @@ public class Client  {
     private static void startConsoleThread(Channel channel){
         new Thread(()->{
             while (!Thread.interrupted()){
-                if(LoginUtil.hasLogin(channel)){
+//                if(LoginUtil.hasLogin(channel)){
                     log.info("请输入消息：");
                     Scanner scanner = new Scanner(System.in);
                     String line = scanner.nextLine();
                     MessageRequestPacket packet = new MessageRequestPacket(line);
                     channel.writeAndFlush(packet);
-                }
+//                }
             }
         }).start();
     }

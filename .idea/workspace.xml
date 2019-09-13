@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="配置日志">
+    <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/auth/AuthHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/PacketCodeC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/PacketCodeC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/serializer/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/serializer/Serializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/serializer/impl/JSONSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/serializer/impl/JSONSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyStudy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,14 +29,22 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="ADD_SUFFIX_TO_CHERRY_PICKS_OF_PUBLISHED_COMMITS" value="false" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Softwares/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\Softwares\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -57,7 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Softwares/cmder/vendor/git-for-windows/cmd/git.exe" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -148,6 +159,11 @@
       <workItem from="1567951962414" duration="3735000" />
       <workItem from="1567957520724" duration="2693000" />
       <workItem from="1567998313225" duration="3355000" />
+      <workItem from="1568337416049" duration="845000" />
+      <workItem from="1568338301657" duration="645000" />
+      <workItem from="1568338971643" duration="140000" />
+      <workItem from="1568339128171" duration="421000" />
+      <workItem from="1568339565772" duration="2729000" />
     </task>
     <task id="LOCAL-00001" summary="配置日志">
       <created>1567741823092</created>
@@ -156,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567741823092</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="bugs fix">
+      <created>1568130066270</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568130066270</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -186,17 +209,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="配置日志" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置日志" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="bugs fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugs fix" />
   </component>
 </project>
