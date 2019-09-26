@@ -9,9 +9,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 import lombok.extern.slf4j.Slf4j;
-import top.mengtech.auth.AuthHandler;
-import top.mengtech.coder.PacketDecoder;
-import top.mengtech.coder.PacketEncoder;
+import top.mengtech.server.handler.FirstServerHandler;
 
 @Slf4j
 public class Server {
@@ -29,11 +27,7 @@ public class Server {
                 .childOption(ChannelOption.TCP_NODELAY, true)
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     protected void initChannel(NioSocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(new PacketDecoder());
-                        ch.pipeline().addLast(new LoginRequestHandler());
-                        ch.pipeline().addLast(new AuthHandler());
-                        ch.pipeline().addLast(new MessageRequestHandler());
-                        ch.pipeline().addLast(new PacketEncoder());
+                        ch.pipeline().addLast(new FirstServerHandler());
                     }
                 });
 

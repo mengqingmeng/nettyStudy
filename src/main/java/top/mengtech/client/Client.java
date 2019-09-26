@@ -1,7 +1,6 @@
 package top.mengtech.client;
 
 import io.netty.bootstrap.Bootstrap;
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -10,11 +9,8 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import lombok.extern.slf4j.Slf4j;
-import top.mengtech.coder.PacketDecoder;
-import top.mengtech.coder.PacketEncoder;
+import top.mengtech.client.handler.FirstClientHandler;
 import top.mengtech.packet.MessageRequestPacket;
-import top.mengtech.packet.PacketCodeC;
-import top.mengtech.server.LoginRequestHandler;
 
 import java.util.Date;
 import java.util.Scanner;
@@ -36,10 +32,7 @@ public class Client  {
                 .option(ChannelOption.TCP_NODELAY, true)
                 .handler(new ChannelInitializer<SocketChannel>() {
                     protected void initChannel(SocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(new PacketDecoder());
-                        ch.pipeline().addLast(new LoginResponseHandler());
-                        ch.pipeline().addLast(new MessageResponseHandler());
-                        ch.pipeline().addLast(new PacketEncoder());
+                        ch.pipeline().addLast(new FirstClientHandler());
                     }
                 });
         connect(bootstrap,"localhost",8000,MAX_RETRY);
@@ -50,7 +43,7 @@ public class Client  {
            if (future.isSuccess()){
                log.info("连接成功");
                Channel channel = ((ChannelFuture)future).channel();
-               startConsoleThread(channel);
+//               startConsoleThread(channel);
            }else{
                log.info("连接失败，开始重连");
                int order = (MAX_RETRY - retry) + 1;

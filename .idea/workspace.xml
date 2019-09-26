@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/handler/FirstClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/handler/FirstServerHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/MessageRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/MessageRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/attributes/Attributes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/auth/AuthHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/LoginRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/MessageRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,9 +48,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="C:\Softwares\maven\repo" />
-        <option name="mavenHome" value="C:/Softwares/maven/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="C:\Softwares\maven\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="localRepository" value="F:\Workspace\WEB\maven\repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../WEB/maven/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="F:\Workspace\WEB\maven\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -163,6 +173,7 @@
       <workItem from="1568339128171" duration="421000" />
       <workItem from="1568339565772" duration="2729000" />
       <workItem from="1569459823271" duration="2471000" />
+      <workItem from="1569502452852" duration="2035000" />
     </task>
     <task id="LOCAL-00001" summary="配置日志">
       <created>1567741823092</created>
