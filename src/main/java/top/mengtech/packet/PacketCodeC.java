@@ -14,22 +14,22 @@ import static top.mengtech.command.Command.*;
 @Slf4j
 public class PacketCodeC {
     private static final int MAGIC_NUMBER = 0x12345678;
-    private final Map<Byte,Class<? extends Packet>> packetTypeMap; // 数据包类型map
-    private final Map<Byte,Serializer> serializerMap; // 序列化map
     public static final PacketCodeC INSTANCE = new PacketCodeC();
 
+    private final Map<Byte, Class<? extends Packet>> packetTypeMap;
+    private final Map<Byte, Serializer> serializerMap;
+
+
     private PacketCodeC() {
-        // 数据包类型Map
         packetTypeMap = new HashMap<>();
         packetTypeMap.put(LOGIN_REQUEST, LoginRequestPacket.class);
         packetTypeMap.put(LOGIN_RESPONSE, LoginResponsePacket.class);
         packetTypeMap.put(MESSAGE_REQUEST, MessageRequestPacket.class);
         packetTypeMap.put(MESSAGE_RESPONSE, MessageResponsePacket.class);
 
-        // 序列化方法Map
         serializerMap = new HashMap<>();
-        Serializer jsonSerializer = new JSONSerializer();
-        serializerMap.put(jsonSerializer.getSerializerAlogrithm(),jsonSerializer);
+        Serializer serializer = new JSONSerializer();
+        serializerMap.put(serializer.getSerializerAlogrithm(), serializer);
     }
 
     public void encode(ByteBuf byteBuf, Packet packet) {
