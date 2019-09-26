@@ -4,22 +4,8 @@
     <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/PacketCodeC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/packet/PacketCodeC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/LoginRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/LoginRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/ByteBufTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/ByteBufTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/coder/PacketDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/coder/PacketDecoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/coder/PacketEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/coder/PacketEncoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/command/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/command/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginRequestPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginResponsePacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/LoginResponsePacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/Packet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/Packet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/packet/PacketCodeC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/packet/PacketCodeC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/serializer/Serializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/serializer/Serializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/serializer/SerializerAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/serializer/SerializerAlgorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/serializer/impl/JSONSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/serializer/impl/JSONSerializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/MessageResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/MessageRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/MessageRequestHandler.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +162,7 @@
       <workItem from="1568338971643" duration="140000" />
       <workItem from="1568339128171" duration="421000" />
       <workItem from="1568339565772" duration="2729000" />
-      <workItem from="1569459823271" duration="2011000" />
+      <workItem from="1569459823271" duration="2471000" />
     </task>
     <task id="LOCAL-00001" summary="配置日志">
       <created>1567741823092</created>
@@ -224,21 +210,5 @@
     <MESSAGE value="配置日志" />
     <MESSAGE value="bugs fix" />
     <option name="LAST_COMMIT_MESSAGE" value="bugs fix" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/top/mengtech/auth/AuthHandler.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/top/mengtech/client/LoginResponseHandler.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
