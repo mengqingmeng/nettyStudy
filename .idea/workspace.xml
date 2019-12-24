@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7df1bb-e0a0-4eba-bb10-12428f98bd55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/SocketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/client/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/mengtech/server/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/mengtech/server/ServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/client/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/client/ClientHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/top/mengtech/server/ServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/mengtech/server/ServerHandler.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,8 +33,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../WEB/maven/apache-maven-3.5.0" />
-        <option name="userSettingsFile" value="$PROJECT_DIR$/../../WEB/maven/conf/settings.xml" />
+        <option name="localRepository" value="D:\MQM\JAVA\maven\repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\MQM\JAVA\maven\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -51,6 +47,11 @@
   </component>
   <component name="ProjectId" id="1PfOKaCRKjmmnDwFQTHtLSCCFUL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="LombokPluginEnabledInProject" value="true" />
@@ -62,6 +63,7 @@
     <property name="LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled" value="false" />
     <property name="LombokPluginIS_MISSING_LOMBOK_CHECK_Enabled" value="false" />
     <property name="LombokPluginIS_VAL_Enabled" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -71,19 +73,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -120,10 +110,22 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -149,6 +151,12 @@
       <workItem from="1567687453783" duration="3256000" />
       <workItem from="1567691464117" duration="2013000" />
       <workItem from="1567693582805" duration="213000" />
+      <workItem from="1577165444678" duration="919000" />
+      <workItem from="1577166395219" duration="550000" />
+      <workItem from="1577167083625" duration="755000" />
+      <workItem from="1577169377512" duration="936000" />
+      <workItem from="1577173867009" duration="787000" />
+      <workItem from="1577175162386" duration="3448000" />
     </task>
     <servers />
   </component>
@@ -176,5 +184,78 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="450" y="188" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1577166767643">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="450" y="188" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577166767643" />
+    <state x="525" y="138" key="#com.intellij.ide.util.MemberChooser" timestamp="1577177409125">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="525" y="138" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577177409125" />
+    <state x="500" y="188" key="FileChooserDialogImpl" timestamp="1577166365230">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="500" y="188" key="FileChooserDialogImpl/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577166365230" />
+    <state width="1397" height="295" key="GridCell.Tab.0.bottom" timestamp="1577176989218">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="295" key="GridCell.Tab.0.bottom/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577176989218" />
+    <state width="1340" height="206" key="GridCell.Tab.0.bottom/0.0.1440.860/1440.0.1440.860@1440.0.1440.860" timestamp="1577174656073" />
+    <state width="1397" height="295" key="GridCell.Tab.0.center" timestamp="1577176989218">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="295" key="GridCell.Tab.0.center/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577176989218" />
+    <state width="1340" height="206" key="GridCell.Tab.0.center/0.0.1440.860/1440.0.1440.860@1440.0.1440.860" timestamp="1577174656072" />
+    <state width="1397" height="295" key="GridCell.Tab.0.left" timestamp="1577176989218">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="295" key="GridCell.Tab.0.left/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577176989218" />
+    <state width="1340" height="206" key="GridCell.Tab.0.left/0.0.1440.860/1440.0.1440.860@1440.0.1440.860" timestamp="1577174656072" />
+    <state width="1397" height="295" key="GridCell.Tab.0.right" timestamp="1577176989218">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="295" key="GridCell.Tab.0.right/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577176989218" />
+    <state width="1340" height="206" key="GridCell.Tab.0.right/0.0.1440.860/1440.0.1440.860@1440.0.1440.860" timestamp="1577174656072" />
+    <state width="1397" height="295" key="GridCell.Tab.1.bottom" timestamp="1577176989218">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="295" key="GridCell.Tab.1.bottom/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577176989218" />
+    <state width="1397" height="295" key="GridCell.Tab.1.center" timestamp="1577176989218">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="295" key="GridCell.Tab.1.center/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577176989218" />
+    <state width="1397" height="295" key="GridCell.Tab.1.left" timestamp="1577176989218">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="295" key="GridCell.Tab.1.left/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577176989218" />
+    <state width="1397" height="295" key="GridCell.Tab.1.right" timestamp="1577176989218">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="295" key="GridCell.Tab.1.right/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577176989218" />
+    <state x="223" y="75" key="SettingsEditor" timestamp="1577166368562">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="223" y="75" key="SettingsEditor/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577166368562" />
+    <state x="407" y="70" width="626" height="720" key="find.popup" timestamp="1577167212756">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="407" y="70" width="626" height="720" key="find.popup/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577167212756" />
+    <state x="383" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1577167093247">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="383" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1577167093247" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/top/mengtech/server/ServerHandler.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

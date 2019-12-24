@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Server {
-    private static final int PORT = 8000;
+    private static final int PORT = 8888;
 
     public static void main(String[] args) {
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -22,7 +22,8 @@ public class Server {
                 .channel(NioServerSocketChannel.class)
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     protected void initChannel(NioSocketChannel nioSocketChannel) throws Exception {
-                        nioSocketChannel.pipeline().addLast(new ServerHandler());
+//                        nioSocketChannel.pipeline().addLast(new ServerHandler());
+                        nioSocketChannel.pipeline().addLast(new SocketHandler());
                     }
                 });
 
@@ -30,7 +31,7 @@ public class Server {
     }
 
     private static void bind(final ServerBootstrap serverBootStrap,final int port){
-        serverBootStrap.bind(8000).addListener(new GenericFutureListener<Future<? super Void>>() {
+        serverBootStrap.bind(PORT).addListener(new GenericFutureListener<Future<? super Void>>() {
             public void operationComplete(Future<? super Void> future) throws Exception {
                 if(future.isSuccess()){
                     log.info("端口["+ port +"]绑定成功");
