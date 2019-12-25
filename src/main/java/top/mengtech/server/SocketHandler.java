@@ -1,27 +1,36 @@
 package top.mengtech.server;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.channel.*;
-import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
+import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import lombok.extern.slf4j.Slf4j;
 
-import java.time.LocalDateTime;
-
 @Slf4j
-public class SocketHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
+public class SocketHandler extends ChannelInboundHandlerAdapter {
     @Override
-    protected void channelRead0(ChannelHandlerContext channelHandlerContext, TextWebSocketFrame textWebSocketFrame) throws Exception {
-        log.info("收到消息：" + textWebSocketFrame.text());
-        channelHandlerContext.writeAndFlush(new TextWebSocketFrame("服务器时间：" + LocalDateTime.now()));
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+
+        byte[] bytes = "欢迎".getBytes("utf-8");
+        ByteBuf byteBuf = ctx.alloc().buffer();
+        byteBuf.writeBytes(bytes);
+        ctx.channel().writeAndFlush(msg);
     }
 
     @Override
-    public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
-        log.info("建立连接：" + ctx.channel().id().asLongText());
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        byte[] bytes = "连接成功".getBytes("utf-8");
+        ByteBuf byteBuf = ctx.alloc().buffer();
+        byteBuf.writeBytes(bytes);
+//        ctx.channel().writeAndFlush(byteBuf);
+        log.info("连接成功");
     }
 
     @Override
-    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
-        log.info("");
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        super.exceptionCaught(ctx, cause);
+        Channel channel = ctx.channel();
+        //……
+        if(channel.isActive())ctx.close();
     }
 }
