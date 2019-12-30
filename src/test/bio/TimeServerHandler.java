@@ -21,7 +21,6 @@ public class TimeServerHandler implements Runnable{
 
                 // 读取消息
                 while(true){
-                    System.out.println(bufferedReader.readLine());
                     byte[] data = new byte[1024];
                     int len;
                     while ((len = inputStream.read(data)) !=-1){
