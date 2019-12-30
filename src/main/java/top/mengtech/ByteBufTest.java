@@ -6,6 +6,7 @@ import io.netty.buffer.ByteBufAllocator;
 public class ByteBufTest {
     public static void main(String[] args) {
         ByteBuf buffer = ByteBufAllocator.DEFAULT.buffer(9,100);
+
         print("allocate ByteBuf(9,100)",buffer);
 
         buffer.writeBytes(new byte[]{1,2,3,4});
