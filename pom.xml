@@ -7,7 +7,6 @@
     <groupId>top.mengtech</groupId>
     <artifactId>nettyStudy</artifactId>
     <version>1.0-SNAPSHOT</version>
-<<<<<<< HEAD
     <build>
         <plugins>
             <plugin>
@@ -21,15 +20,10 @@
         </plugins>
     </build>
 
-=======
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <encoding>UTF-8</encoding>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
->>>>>>> 632911c6b7d9cef0788cf8a20596bf95c9474cdf
     <dependencies>
         <dependency>
             <groupId>io.netty</groupId>
