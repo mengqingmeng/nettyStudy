@@ -13,15 +13,26 @@ import static top.mengtech.command.Command.LOGIN_RESPONSE;
 
 public class PacketCodeC {
     private static final int MAGIC_NUMBER = 0x12345678;
+<<<<<<< HEAD
     private static final Map<Byte,Class<? extends Packet>> packetTypeMap; // 数据包类型map
     private static final Map<Byte,Serializer> serializerMap; // 序列化map
+=======
+    private final Map<Byte,Class<? extends Packet>> packetTypeMap; // 数据包类型map
+    private final Map<Byte,Serializer> serializerMap; // 序列化map
+>>>>>>> 632911c6b7d9cef0788cf8a20596bf95c9474cdf
     public static final PacketCodeC INSTANCE = new PacketCodeC();
 
-    static {
+    private PacketCodeC() {
+        // 数据包类型Map
         packetTypeMap = new HashMap<Byte, Class<? extends Packet>>();
         packetTypeMap.put(LOGIN_REQUEST, LoginRequestPacket.class);
+<<<<<<< HEAD
         packetTypeMap.put(LOGIN_RESPONSE, LoginResponsePacket.class);
+=======
+        packetTypeMap.put(LOGIN_RESPONSE,LoginResponsePacket.class);
+>>>>>>> 632911c6b7d9cef0788cf8a20596bf95c9474cdf
 
+        // 序列化方法Map
         serializerMap = new HashMap<Byte, Serializer>();
         Serializer jsonSerializer = new JSONSerializer();
         serializerMap.put(jsonSerializer.getSerializerAlgorithm(),jsonSerializer);
@@ -40,6 +51,10 @@ public class PacketCodeC {
         buffer.writeInt(bytes.length); // 长度
         buffer.writeBytes(bytes); // 数据
         return buffer;
+    }
+
+    public void encode(ByteBuf out,Packet packet){
+        out = encode(packet);
     }
 
     public Packet decode(ByteBuf byteBuf){
